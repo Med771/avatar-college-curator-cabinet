@@ -1,0 +1,90 @@
+<table>
+    <tr>
+        <th class="" rowspan="4"></th>
+        <th class="" colspan="9">2. Разработка на Python</th>
+        <th class="" colspan="5">3. Библиотеки для Python разработчика</th>
+        <th class="" colspan="9">4. Объектно-ориентированное программирование</th>
+    </tr>
+    <tr>
+        <th class="">W13</th>
+        <th class="">W13</th>
+        <th class="">W14</th>
+        <th class="">W14</th>
+        <th class="">W15</th>
+        <th class="">W15</th>
+        <th class="">W16</th>
+        <th class="">W16</th>
+        <th class="">W17</th>
+        <th class="">W18</th>
+        <th class="">W19</th>
+        <th class="">W20</th>
+        <th class="">W20</th>
+        <th class="">W21</th>
+        <th class="">W22</th>
+        <th class="">W22</th>
+        <th class="">W23</th>
+        <th class="">W23</th>
+        <th class="">W24</th>
+        <th class="">W24</th>
+        <th class="">W25</th>
+        <th class="">W25</th>
+        <th class="">W26</th>
+    </tr>
+    <tr>
+        <td class="">25 марта — 31 марта</td>
+        <td class="">25 марта — 31 марта</td>
+        <td class="">1 апреля — 7 апреля</td>
+        <td class="">1 апреля — 7 апреля</td>
+        <td class="">8 апреля — 14 апреля</td>
+        <td class="">8 апреля — 14 апреля</td>
+        <td class="">15 апреля — 21 апреля</td>
+        <td class="">15 апреля — 21 апреля</td>
+        <td class="">22 апреля — 28 апреля</td>
+        <td class="">29 апреля — 5 мая</td>
+        <td class="">6 мая — 12 мая</td>
+        <td class="">13 мая — 19 мая</td>
+        <td class="">13 мая — 19 мая</td>
+        <td class="">20 мая — 26 мая</td>
+        <td class="">27 мая — 2 июня</td>
+        <td class="">27 мая — 2 июня</td>
+        <td class="">3 июня — 9 июня</td>
+        <td class="">3 июня — 9 июня</td>
+        <td class="">10 июня — 16 июня</td>
+        <td class="">10 июня — 16 июня</td>
+        <td class="">17 июня — 23 июня</td>
+        <td class="">17 июня — 23 июня</td>
+        <td class="">24 июня — 30 июня</td>
+    </tr>
+    <tr>
+        <td class="">8.1 Установка программ</td>
+        <td class="">8.2 Модули и пакеты. Организация собственного проекта</td>
+        <td class="">9.1 Poetry. Оформление кода</td>
+        <td class="">9.2 Основы Git</td>
+        <td class="">10.1 Продвинутый Git</td>
+        <td class="">10.2 Тестирование. Pytest</td>
+        <td class="">11.1 Включения и генераторы</td>
+        <td class="">11.2 Декораторы</td>
+        <td class="">Курс 2. Итоговое задание</td>
+        <td class="">12.1 Библиотеки json, requests и datetime</td>
+        <td class="">12.2 Библиотека logging</td>
+        <td class="">13.1 Библиотеки pandas, csv</td>
+        <td class="">13.2 Библиотеки regex, collections, random</td>
+        <td class="">Проект 1. Приложение для анализа банковских операций</td>
+        <td class="">14.1 Введение в ООП</td>
+        <td class="">14.2 Режимы доступа</td>
+        <td class="">15.1 Магические методы</td>
+        <td class="">15.2 Лучшие практики ООП</td>
+        <td class="">16.1 Наследование</td>
+        <td class="">16.2 Множественное наследование</td>
+        <td class="">17.1 Исключения</td>
+        <td class="">17.2 Лучшие практики ООП</td>
+        <td class="">Проект 2. Поиск вакансий</td>
+    </tr>
+    <tr *ngFor="let StudentName of Object.keys(StudentsLessonsResponse)">
+        <td>{{ StudentName }}</td>
+        <td *ngFor="let lesson of LessonsArray">
+            <p *ngIf="StudentsLessonsResponse[StudentName][lesson]; else elseBlock">{{ StudentsLessonsResponse[StudentName][lesson] }}</p>
+            <ng-template #elseBlock>no info</ng-template>
+        </td>
+    </tr>
+</table>
